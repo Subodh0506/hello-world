@@ -13,5 +13,22 @@ public class ArrayList {
        while (it.hasNext()) {
             System.out.println("from iterator "+it.next());
        }
+
+       list.add(1,"nameupdate");
+       System.out.println("after adding "+list);
+
+       list.remove(1);
+       System.out.println("after removing "+list);
+
+       list.set(1,"nameset");
+         System.out.println("after setting "+list);
+
+         System.out.println("get element at index 1 "+list.get(1));
+
+        System.out.println("size of list "+list.size());
+        System.out.println("check contains "+ list.contains("name"));
+
+        list.clear();
+        System.out.println("after clear "+list);
     }
 }

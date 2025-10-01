@@ -1,9 +1,19 @@
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
+
+class CompareByLength implements Comparator<Integer> {
+    @Override
+    public int compare(Integer s1, Integer s2) {
+        return s2-s1;
+    }
+}
 
 public class ArrayList {
-    public static void main(String[] args) {
-        List<String> list = new java.util.ArrayList<>();
+    void arraylistexecute() {
+         List<String> list = new java.util.ArrayList<>();
         list.add("name1");
         list.add("name2");
         list.add("name3");
@@ -30,5 +40,29 @@ public class ArrayList {
 
         list.clear();
         System.out.println("after clear "+list);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" switch to select \n 1.ArrayList \n 2.LinkedList");
+        
+        boolean flag = true;
+        while(flag) {
+            int input = scanner.nextInt();
+            switch (input) {
+            case 1:
+                ArrayList arrayList = new ArrayList();
+                arrayList.arraylistexecute();
+                break;
+            case 2:
+                Linked linked = new Linked();
+                linked.linkedlistexecute();
+                break;
+            default:
+                flag = false;
+                System.out.println("invalid input");
+        }   
+        
+        }
+        scanner.close();
     }
 }

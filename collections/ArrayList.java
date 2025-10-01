@@ -1,8 +1,7 @@
-import java.util.Collections;
+
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 
 class CompareByLength implements Comparator<Integer> {
     @Override
@@ -41,28 +40,5 @@ public class ArrayList {
         list.clear();
         System.out.println("after clear "+list);
     }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(" switch to select \n 1.ArrayList \n 2.LinkedList");
-        
-        boolean flag = true;
-        while(flag) {
-            int input = scanner.nextInt();
-            switch (input) {
-            case 1:
-                ArrayList arrayList = new ArrayList();
-                arrayList.arraylistexecute();
-                break;
-            case 2:
-                Linked linked = new Linked();
-                linked.linkedlistexecute();
-                break;
-            default:
-                flag = false;
-                System.out.println("invalid input");
-        }   
-        
-        }
-        scanner.close();
-    }
+   
 }
